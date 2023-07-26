@@ -52,9 +52,9 @@ try:
         back_from_function = get_fruityvice_data(fruit_choice)
         streamlit.dataframe(back_from_function)
 
-#allow end user to add fruit
+#allow end user to add fruit to list
 def insert_row_snowflake(new_fruit):
-     with my_cnx.cursor() as my_cur:
+    with my_cnx.cursor() as my_cur:
          my_cur.execute("Insert into fruit_load_list values ('from streamlit')")
          return "Thanks for adding " + new_fruit
 
